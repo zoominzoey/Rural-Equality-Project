@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Equality Project | Equity, Advocacy & Outreach</title>
+    <meta name="description" content="Rural Equality Project is a nonprofit organization established in November 2023 in Pekin, Illinois, promoting equity, advocacy, and outreach in rural communities.">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        rep: {
+                            purple: '#5a189a',
+                            purpleDark: '#3c096c',
+                            purpleLight: '#f3e8ff',
+                            yellow: '#f8c000',
+                            yellowLight: '#fef9c3',
+                            orange: '#f98410',
+                            orangeDark: '#c25e00',
+                            orangeLight: '#ffedd5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1e293b;
+            background-color: #fafafa;
+        }
+
+        /* High-visibility accessible focus rings */
+        *:focus-visible {
+            outline: 3px solid #f98410 !important;
+            outline-offset: 3px !important;
+        }
+
+        /* Skip to main content link for keyboard and screen reader users */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            background: #5a189a;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            z-index: 100;
+            border-radius: 0 0 0.5rem 0.5rem;
+            font-weight: 600;
+            transition: top 0.2s ease-in-out;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Active Navigation State */
+        .nav-btn[aria-current="page"] {
+            background-color: #5a189a;
+            color: #ffffff;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(90, 24, 154, 0.2);
+        }
+
+        /* Custom subtle gradient banner */
+        .hero-gradient {
+            background: linear-gradient(135deg, #5a189a 0%, #3c096c 65%, #5a189a 100%);
+        }
+
+        /* Rainbow gradient banner for Pekin Pride Festival */
+        .rainbow-banner {
+            background: linear-gradient(
+                135deg,
+                #e40303 0%,
+                #ff8c00 20%,
+                #ffed00 40%,
+                #008026 60%,
+                #004dff 80%,
+                #750787 100%
+            );
+        }
+
+        /* Home Hero Overlay ensuring WCAG AA/AAA text contrast over Background.jpg */
+        .home-hero-overlay {
+            background: linear-gradient(
+                105deg,
+                rgba(40, 9, 75, 0.90) 0%,
+                rgba(90, 24, 154, 0.78) 52%,
+                rgba(30, 15, 55, 0.68) 100%
+            );
+        }
+
+        .pride-accent-bar {
+            background: linear-gradient(90deg, #5a189a 0%, #f98410 50%, #f8c000 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-rep-yellow selection:text-slate-900">
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Live Region for Screen Reader Announcements on Page Change -->
+    <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Top Accent Bar -->
+    <div class="h-2 w-full pride-accent-bar" role="presentation" aria-hidden="true"></div>
+
+    <!-- Header & Navigation Landmark -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm" role="banner">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Brand Logo / Name -->
+                <div class="flex items-center">
+                    <button type="button" onclick="navigateTo('home')" class="flex items-center gap-3 text-left group rounded-xl p-1 -ml-1" aria-label="Rural Equality Project - Return to Home page">
+                        <img src="Copy of Rural Equality Project.png"
+                             alt="Rural Equality Project logo featuring the words RURAL EQUALITY PROJECT next to a minimalist line-art barn above a horizontal six-color rainbow bar"
+                             class="h-16 sm:h-20 w-auto object-contain">
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-2" aria-label="Primary Navigation">
+                    <button type="button" onclick="navigateTo('home')" data-page="home" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all" aria-current="page">
+                        Home
+                    </button>
+                    <button type="button" onclick="navigateTo('resources')" data-page="resources" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
+                        Resources
+                    </button>
+                    <button type="button" onclick="navigateTo('pride')" data-page="pride" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
+                        Pekin Pride Festival
+                    </button>
+                    <button type="button" onclick="navigateTo('contact')" data-page="contact" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
+                        Contact
+                    </button>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2.5 rounded-xl text-rep-purple hover:bg-rep-purpleLight focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <svg id="menu-icon-open" class="block h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="hidden h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-2 shadow-lg" aria-label="Mobile Navigation">
+            <button type="button" onclick="navigateTo('home')" data-page="home" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight" aria-current="page">
+                Home
+            </button>
+            <button type="button" onclick="navigateTo('resources')" data-page="resources" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
+                Resources
+            </button>
+            <button type="button" onclick="navigateTo('pride')" data-page="pride" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
+                Pekin Pride Festival
+            </button>
+            <button type="button" onclick="navigateTo('contact')" data-page="contact" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
+                Contact
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content Landmark -->
+    <main id="main-content" class="flex-grow" tabindex="-1">
+
+        <!-- ==========================================
+             PAGE 1: HOME
+             ========================================== -->
+        <section id="page-home" class="page-view" aria-labelledby="home-heading">
+            <!-- Hero Banner with Background.jpg -->
+            <div class="relative bg-rep-purpleDark text-white py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                <!-- Standard Hero Background Image -->
+                <img src="Background.jpg"
+                     alt="A paved two-lane rural country road stretching straight toward the horizon between green and golden farmland fields under a blue and warm sunset sky."
+                     class="absolute inset-0 w-full h-full object-cover object-center">
+                
+                <!-- High-Contrast Accessible Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-r from-[#3c096c]/90 via-[#5a189a]/80 to-[#3c096c]/75" aria-hidden="true"></div>
+
+                <div class="max-w-6xl mx-auto relative z-10">
+                    <div class="max-w-3xl space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/25 text-rep-yellow text-xs sm:text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">
+                            <span class="w-2.5 h-2.5 rounded-full bg-rep-yellow" aria-hidden="true"></span>
+                            Established November 2023 • Pekin, Illinois
+                        </div>
+                        <h1 id="home-heading" class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-sm">
+                            Fostering Equity, Advocacy &amp; Belonging in <span class="text-rep-yellow underline decoration-rep-orange decoration-4 underline-offset-4">Rural Communities</span>
+                        </h1>
+                        <p class="text-base sm:text-lg text-purple-50 leading-relaxed max-w-2xl drop-shadow-sm">
+                            The Rural Equality Project works across Pekin and rural Central Illinois to build welcoming spaces, connect neighbors with life-saving and affirming resources, and celebrate rural diversity through grassroots community action.
+                        </p>
+                        <div class="pt-2 flex flex-wrap gap-4">
+                            <button type="button" onclick="navigateTo('resources')" class="px-6 py-3.5 rounded-xl bg-rep-yellow text-slate-950 font-bold text-sm sm:text-base shadow-lg hover:bg-amber-400 transition-all flex items-center gap-2">
+                                <span>Explore Support Resources</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </button>
+                            <button type="button" onclick="navigateTo('pride')" class="px-6 py-3.5 rounded-xl bg-rep-orange text-slate-950 font-bold text-sm sm:text-base shadow-lg hover:bg-amber-500 transition-all">
+                                Pekin Pride Festival
+                            </button>
+                            <button type="button" onclick="navigateTo('contact')" class="px-6 py-3.5 rounded-xl bg-white/15 backdrop-blur-sm text-white border border-white/40 font-semibold text-sm sm:text-base hover:bg-white/25 transition-all">
+                                Get Involved
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About & Mission Section -->
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-rep-purple bg-rep-purpleLight px-3.5 py-1.5 rounded-full">Our Story &amp; Purpose</span>
+                    <h2 class="mt-4 text-2xl sm:text-4xl font-bold text-slate-900">Rooted in Pekin, Reaching Across Rural Illinois</h2>
+                    <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+                        Founded in November 2023, the Rural Equality Project emerged from a simple belief: everyone deserves to feel safe, valued, and supported right where they live—no matter the size of their hometown.
+                    </p>
+                </div>
+
+                <!-- 3 Pillars Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pillar 1 -->
+                    <article class="bg-white rounded-2xl p-7 border-t-4 border-rep-purple shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-rep-purpleLight text-rep-purple flex items-center justify-center mb-5" aria-hidden="true">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Accessible Health &amp; Crisis Resources</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Navigating support systems in rural areas can be challenging. We maintain a curated directory of state, nationwide, and local Central Illinois hotlines, healthcare providers, and mutual aid organizations.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100">
+                            <button type="button" onclick="navigateTo('resources')" class="text-rep-purple font-semibold text-sm hover:underline inline-flex items-center gap-1.5">
+                                View Resource Directory
+                                <span aria-hidden="true">&rarr;</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Pillar 2 -->
+                    <article class="bg-white rounded-2xl p-7 border-t-4 border-rep-orange shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-rep-orangeLight text-rep-orangeDark flex items-center justify-center mb-5" aria-hidden="true">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Pekin Pride Festival &amp; Outreach</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Launching the inaugural Pekin Pride Festival in August 2024 marked a historic milestone for Tazewell County. We create family-friendly events that bring neighbors, local vendors, and advocates together.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100">
+                            <button type="button" onclick="navigateTo('pride')" class="text-rep-purple font-semibold text-sm hover:underline inline-flex items-center gap-1.5">
+                                Learn About Pekin Pride
+                                <span aria-hidden="true">&rarr;</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Pillar 3 -->
+                    <article class="bg-white rounded-2xl p-7 border-t-4 border-rep-yellow shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-rep-yellowLight text-amber-800 flex items-center justify-center mb-5" aria-hidden="true">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Coalition &amp; Civic Engagement</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                We partner with organizations across Greater Peoria, McLean County, and Champaign County to strengthen regional solidarity, educate communities, and amplify rural voices.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100">
+                            <button type="button" onclick="navigateTo('contact')" class="text-rep-purple font-semibold text-sm hover:underline inline-flex items-center gap-1.5">
+                                Partner With Us
+                                <span aria-hidden="true">&rarr;</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Immediate Crisis Callout Banner on Home -->
+                <div class="mt-14 bg-rep-purpleLight border-2 border-rep-purple/20 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="space-y-1">
+                        <h3 class="text-lg sm:text-xl font-bold text-rep-purple">Need Immediate Support or Crisis Assistance?</h3>
+                        <p class="text-sm sm:text-base text-slate-700">
+                            Free, confidential support is available 24/7 by calling or texting <strong>988</strong>, or explore our full list of national and local hotlines.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 shrink-0">
+                        <a href="tel:988" class="px-5 py-3 rounded-xl bg-rep-purple text-white font-semibold text-sm hover:bg-rep-purpleDark transition-colors">
+                            Dial 988 Now
+                        </a>
+                        <button type="button" onclick="navigateTo('resources')" class="px-5 py-3 rounded-xl bg-white text-rep-purple border border-rep-purple font-semibold text-sm hover:bg-purple-50 transition-colors">
+                            All Hotlines &amp; Links
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PAGE 2: RESOURCES
+             ========================================== -->
+        <section id="page-resources" class="page-view hidden" aria-labelledby="resources-heading">
+            <!-- Page Header -->
+            <div class="bg-rep-purple text-white py-12 px-4 sm:px-6 lg:px-8 border-b-4 border-rep-yellow">
+                <div class="max-w-4xl mx-auto">
+                    <span class="inline-block px-3 py-1 rounded-full bg-white/15 text-rep-yellow text-xs font-bold uppercase tracking-wider mb-3">
+                        Support &amp; Directory
+                    </span>
+                    <h1 id="resources-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                        Resources
+                    </h1>
+                    <p class="mt-2 text-purple-100 text-base sm:text-lg">
+                        State, nationwide, and local Central Illinois health resources and community organizations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Resources List Container -->
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+
+                <!-- SECTION 1: State and Nationwide Health Resources -->
+                <section aria-labelledby="state-nationwide-heading" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                    <div class="border-b-2 border-rep-purple pb-4 mb-6 flex items-center justify-between flex-wrap gap-2">
+                        <h2 id="state-nationwide-heading" class="text-2xl font-bold text-rep-purple">
+                            State and Nationwide Health Resources
+                        </h2>
+                        <span class="text-xs font-semibold bg-rep-yellowLight text-slate-900 px-3 py-1 rounded-full border border-rep-yellow">
+                            Direct Hotlines &amp; Portals
+                        </span>
+                    </div>
+
+                    <ul class="divide-y divide-slate-200">
+                        <!-- Suicide Prevention Hotline -->
+                        <li class="py-5 first:pt-0">
+                            <h3 class="text-lg font-bold text-slate-900">Suicide Prevention Hotline:</h3>
+                            <div class="mt-2 flex flex-wrap items-center gap-3 text-base">
+                                <a href="tel:1-800-273-8255" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-rep-purpleLight text-rep-purple font-bold hover:bg-rep-purple hover:text-white transition-colors" aria-label="Call Suicide Prevention Hotline at 1. 8 0 0. 2 7 3. 8 2 5 5">
+                                    1.800.273.8255
+                                </a>
+                                <span class="font-medium text-slate-600">or</span>
+                                <a href="tel:988" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-rep-yellow text-slate-950 font-bold hover:bg-amber-400 transition-colors" aria-label="Dial 9 8 8 for the Suicide and Crisis Lifeline">
+                                    Dial - 988
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- Trevor Project -->
+                        <li class="py-5">
+                            <h3 class="text-lg font-bold text-slate-900">Trevor Project</h3>
+                            <div class="mt-2 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-base">
+                                <a href="tel:866-488-7386" class="font-semibold text-rep-purple hover:underline inline-flex items-center gap-1.5">
+                                    866.488.7386
+                                </a>
+                                <span class="hidden sm:inline text-slate-300" aria-hidden="true">|</span>
+                                <a href="https://www.thetrevorproject.org/" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-rep-purple underline break-all">
+                                    https://www.thetrevorproject.org/
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- Point of Pride -->
+                        <li class="py-5">
+                            <h3 class="text-lg font-bold text-slate-900">Point of Pride</h3>
+                            <div class="mt-1.5">
+                                <a href="https://www.pointofpride.org/" target="_blank" rel="noopener noreferrer" class="text-rep-purple hover:underline break-all font-medium">
+                                    https://www.pointofpride.org/
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- Trans LifeLine -->
+                        <li class="py-5">
+                            <h3 class="text-lg font-bold text-slate-900">Trans LifeLine</h3>
+                            <div class="mt-2 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-base">
+                                <a href="tel:877-565-8860" class="font-semibold text-rep-purple hover:underline">
+                                    877.565.8860
+                                </a>
+                                <span class="hidden sm:inline text-slate-300" aria-hidden="true">|</span>
+                                <a href="https://translifeline.org/" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-rep-purple underline break-all">
+                                    https://translifeline.org/
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- National Domestic Violence Hotline -->
+                        <li class="py-5">
+                            <h3 class="text-lg font-bold text-slate-900">National Domestic Violence Hotline</h3>
+                            <div class="mt-1.5">
+                                <a href="tel:1-800-799-7233" class="font-semibold text-rep-purple hover:underline">
+                                    1.800.799.7233
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- National Runaway Hotline -->
+                        <li class="py-5">
+                            <h3 class="text-lg font-bold text-slate-900">National Runaway Hotline</h3>
+                            <div class="mt-1.5">
+                                <a href="tel:800-231-6946" class="font-semibold text-rep-purple hover:underline">
+                                    800.231.6946
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- Illinois AIDS/HIV and STD Hotline -->
+                        <li class="py-5">
+                            <h3 class="text-lg font-bold text-slate-900">Illinois AIDS/HIV and STD Hotline</h3>
+                            <div class="mt-1.5">
+                                <a href="tel:1-800-243-2437" class="font-semibold text-rep-purple hover:underline">
+                                    1.800.243.2437
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- Illinois Homeless Education Program Hotline -->
+                        <li class="py-5">
+                            <h3 class="text-lg font-bold text-slate-900">Illinois Homeless Education Program Hotline</h3>
+                            <div class="mt-1.5">
+                                <a href="tel:1-800-215-6379" class="font-semibold text-rep-purple hover:underline">
+                                    1.800.215.6379
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- Poison Control Hotline -->
+                        <li class="py-5 last:pb-0">
+                            <h3 class="text-lg font-bold text-slate-900">Poison Control Hotline</h3>
+                            <div class="mt-1.5">
+                                <a href="tel:1-800-222-1222" class="font-semibold text-rep-purple hover:underline">
+                                    1.800.222.1222
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- SECTION 2: Local Resources -->
+                <section aria-labelledby="local-resources-heading" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                    <div class="border-b-2 border-rep-orange pb-4 mb-6">
+                        <h2 id="local-resources-heading" class="text-2xl font-bold text-rep-purple">
+                            Local Resources
+                        </h2>
+                    </div>
+
+                    <ul class="divide-y divide-slate-200">
+                        <li class="py-4 first:pt-0">
+                            <h3 class="text-lg font-bold text-slate-900">Central Illinois FRIENDS</h3>
+                            <a href="https://www.friendsofcentralillinois.org/" target="_blank" rel="noopener noreferrer" class="mt-1 inline-block text-rep-purple hover:underline break-all font-medium">
+                                https://www.friendsofcentralillinois.org/
+                            </a>
+                        </li>
+
+                        <li class="py-4">
+                            <h3 class="text-lg font-bold text-slate-900">Acorn Equality Fund</h3>
+                            <a href="https://www.acornequalityfund.org/" target="_blank" rel="noopener noreferrer" class="mt-1 inline-block text-rep-purple hover:underline break-all font-medium">
+                                https://www.acornequalityfund.org/
+                            </a>
+                        </li>
+
+                        <li class="py-4 last:pb-0">
+                            <h3 class="text-lg font-bold text-slate-900">Positive Health Solutions</h3>
+                            <a href="https://peoria.medicine.uic.edu/about/patient-care/positive-health-solutions/" target="_blank" rel="noopener noreferrer" class="mt-1 inline-block text-rep-purple hover:underline break-all font-medium">
+                                https://peoria.medicine.uic.edu/about/patient-care/positive-health-solutions/
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- SECTION 3: Community Organizations -->
+                <section aria-labelledby="community-orgs-heading" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                    <div class="border-b-2 border-rep-yellow pb-4 mb-6">
+                        <h2 id="community-orgs-heading" class="text-2xl font-bold text-rep-purple">
+                            Community Organizations
+                        </h2>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Greater Peoria -->
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 bg-rep-purpleLight/70 px-4 py-2 rounded-xl border-l-4 border-rep-purple mb-4">
+                                Greater Peoria
+                            </h3>
+                            <ul class="divide-y divide-slate-200 pl-2">
+                                <li class="py-3.5">
+                                    <p class="text-base font-bold text-slate-900">River City Rainbow Collective</p>
+                                    <a href="https://rivercityrainbowcollective.org/" target="_blank" rel="noopener noreferrer" class="text-rep-purple hover:underline break-all font-medium">
+                                        https://rivercityrainbowcollective.org/
+                                    </a>
+                                </li>
+                                <li class="py-3.5">
+                                    <p class="text-base font-bold text-slate-900">Peoria Proud</p>
+                                    <a href="https://peoriaproud.org/" target="_blank" rel="noopener noreferrer" class="text-rep-purple hover:underline break-all font-medium">
+                                        https://peoriaproud.org/
+                                    </a>
+                                </li>
+                                <li class="py-3.5">
+                                    <p class="text-base font-bold text-slate-900">Peoria Transgender Society</p>
+                                    <a href="https://peoriatransgendersociety.com/" target="_blank" rel="noopener noreferrer" class="text-rep-purple hover:underline break-all font-medium">
+                                        https://peoriatransgendersociety.com/
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- McLean County -->
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 bg-rep-orangeLight/70 px-4 py-2 rounded-xl border-l-4 border-rep-orange mb-4">
+                                McLean County
+                            </h3>
+                            <ul class="pl-2">
+                                <li class="py-2">
+                                    <p class="text-base font-bold text-slate-900">Prairie Pride Coalition</p>
+                                    <a href="https://ppc-il.org/" target="_blank" rel="noopener noreferrer" class="text-rep-purple hover:underline break-all font-medium">
+                                        https://ppc-il.org/
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Champaign County -->
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 bg-rep-yellowLight px-4 py-2 rounded-xl border-l-4 border-rep-yellow mb-4">
+                                Champaign County
+                            </h3>
+                            <ul class="pl-2">
+                                <li class="py-2">
+                                    <p class="text-base font-bold text-slate-900">UP Center of Champaign County</p>
+                                    <a href="https://www.unitingpride.org/" target="_blank" rel="noopener noreferrer" class="text-rep-purple hover:underline break-all font-medium">
+                                        https://www.unitingpride.org/
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Required Note at Bottom of Resources -->
+                <div class="bg-rep-purpleLight/60 border-2 border-rep-purple/30 rounded-2xl p-6 text-center">
+                    <p class="text-base sm:text-lg font-medium text-slate-900">
+                        *If you are a community organization and would like to be added to this list, please email
+                        <a href="mailto:admin@ruralequalityproject.org" class="font-bold text-rep-purple underline hover:text-rep-purpleDark break-all">
+                            admin@ruralequalityproject.org
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PAGE 3: PEKIN PRIDE FESTIVAL
+             ========================================== -->
+        <section id="page-pride" class="page-view hidden" aria-labelledby="pride-heading">
+            <!-- Festival Banner -->
+            <div class="rainbow-banner relative text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b-4 border-rep-purple overflow-hidden">
+                <!-- Subtle dark overlay to ensure crisp white text readability over the yellow/orange rainbow bands -->
+                <div class="absolute inset-0 bg-slate-950/45 backdrop-blur-[1px]" aria-hidden="true"></div>
+                <div class="max-w-5xl mx-auto text-center space-y-5 relative z-10">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-white text-rep-purpleDark text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-md">
+                        Celebration • Visibility • Community
+                    </span>
+                    <h1 id="pride-heading" class="text-3xl sm:text-5xl font-extrabold tracking-tight drop-shadow-md">
+                        Pekin Pride Festival
+                    </h1>
+                    <p class="max-w-2xl mx-auto text-base sm:text-lg text-white font-medium leading-relaxed drop-shadow">
+                        First launched in August 2024 by the Rural Equality Project, the Pekin Pride Festival brings families, neighbors, local artisans, and regional advocates together in the heart of Pekin, Illinois.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-14">
+                <!-- Festival Overview Split -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 space-y-4">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-rep-purple">A Historic Milestone for Rural Central Illinois</h2>
+                        <p class="text-slate-700 leading-relaxed">
+                            When the Rural Equality Project organized the inaugural Pekin Pride Festival in August 2024, it created a welcoming, joyous, and affirming space right in Tazewell County. Designed from the ground up to be family-friendly and accessible to all ages, the festival proves that pride and community solidarity thrive in small towns too.
+                        </p>
+                        <p class="text-slate-700 leading-relaxed">
+                            Each festival features a vibrant mix of local craft vendors, food trucks, live music and performances, youth and family activities, and an outreach fair connecting residents directly with health and community organizations.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="bg-white rounded-2xl border-2 border-rep-purple/20 p-6 shadow-sm space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-10 h-10 rounded-xl bg-rep-yellow flex items-center justify-center font-extrabold text-slate-900" aria-hidden="true">★</span>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-lg">Festival Highlights</h3>
+                                    <p class="text-xs text-slate-500">Pekin, Illinois • Annual Community Event</p>
+                                </div>
+                            </div>
+                            <ul class="space-y-3 text-sm text-slate-700 pt-2">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-rep-purple mt-2 shrink-0" aria-hidden="true"></span>
+                                    <span><strong>Local Vendors &amp; Makers:</strong> Supporting small businesses, artists, and creators from across Central Illinois.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-rep-orange mt-2 shrink-0" aria-hidden="true"></span>
+                                    <span><strong>Resource &amp; Nonprofit Tables:</strong> Direct connection to regional health, mental wellness, and advocacy groups.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="w-2 h-2 rounded-full bg-rep-yellow mt-2 shrink-0" aria-hidden="true"></span>
+                                    <span><strong>All-Ages Family Zone:</strong> Inclusive crafts, games, and community building for youth and families.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==========================================
+                     PEKIN PRIDE FESTIVAL PHOTO GALLERY
+                     ========================================== -->
+                <section aria-labelledby="pride-gallery-heading" class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-sm space-y-8">
+                    <div class="border-b-2 border-rep-purple/15 pb-6 space-y-2">
+                        <span class="inline-block px-3.5 py-1 rounded-full bg-rep-purpleLight text-rep-purple text-xs font-bold uppercase tracking-wider">
+                            Community Moments
+                        </span>
+                        <h2 id="pride-gallery-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                            Pekin Pride Festival Photo Gallery
+                        </h2>
+                        <p class="text-slate-600 text-sm sm:text-base max-w-2xl">
+                            Snapshots of joy, visibility, family connection, and live performances from the Pekin Pride Festival.
+                        </p>
+                    </div>
+
+                    <!-- Simple 4-Photo Responsive Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <!-- Photo 1 -->
+                        <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
+                            <img src="480323142_122195806496188790_6373440089749405954_n.jpg"
+                                 alt="Pansexual and lesbian pride flags lining a curved concrete park pathway leading toward festival vendor tents on green grass under a partly cloudy sky at Pekin Pride Festival."
+                                 class="w-full h-80 object-cover object-center">
+                            <figcaption class="p-5 bg-white border-t border-slate-100">
+                                <h3 class="text-base font-bold text-slate-900">Pride Flags Along the Park Walkway</h3>
+                                <p class="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    Pride flags welcome attendees along the curved park path leading toward community resource booths and vendor tents.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Photo 2 -->
+                        <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
+                            <img src="480327161_122195806514188790_6700056879388801364_n.jpg"
+                                 alt="A drag performer with blonde hair holding a blue and green spotted plush dinosaur toy, interacting warmly with a smiling adult holding a young toddler in a dinosaur-print shirt under a pavilion."
+                                 class="w-full h-80 object-cover object-center">
+                            <figcaption class="p-5 bg-white border-t border-slate-100">
+                                <h3 class="text-base font-bold text-slate-900">Sharing Smiles with Young Festivalgoers</h3>
+                                <p class="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    A performer with a spotted plush dinosaur shares a warm moment with a parent and toddler dressed in a dinosaur-print shirt.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Photo 3 -->
+                        <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
+                            <img src="484337596_1841860406649657_3453948613496680249_n.jpg"
+                                 alt="A drag king performer wearing a black shirt, black pants, and a sparkling rainbow-sequined blazer performing energetically inside a park pavilion near picnic tables."
+                                 class="w-full h-80 object-cover object-top">
+                            <figcaption class="p-5 bg-white border-t border-slate-100">
+                                <h3 class="text-base font-bold text-slate-900">Pavilion Performance</h3>
+                                <p class="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    Wearing a sparkling rainbow-sequined blazer, a performer brings energy and celebration to the park pavilion.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Photo 4 -->
+                        <figure class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
+                            <img src="IMG_1474.HEIC"
+                                 alt="Community members gathered around picnic tables and sitting on the lawn in front of the outdoor performing arts pavilion stage during the Pekin Pride Festival."
+                                 class="w-full h-80 object-cover object-center">
+                            <figcaption class="p-5 bg-white border-t border-slate-100">
+                                <h3 class="text-base font-bold text-slate-900">Community Gathering at the Performing Arts Stage</h3>
+                                <p class="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    Community members gather around picnic tables and on the lawn in front of the outdoor performing arts pavilion stage.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+                </section>
+
+                <!-- How to Participate Cards -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 text-center mb-8">Be Part of Pekin Pride Festival</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <span class="inline-block px-3 py-1 rounded-lg bg-rep-purpleLight text-rep-purple text-xs font-bold mb-3">Vendors &amp; Nonprofits</span>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2">Host a Booth</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    Are you an affirming local business, artisan, food vendor, or community organization? Join our vendor lineup to connect with hundreds of attendees.
+                                </p>
+                            </div>
+                            <button type="button" onclick="openContactWithSubject('Pekin Pride Festival')" class="mt-6 w-full py-2.5 px-4 rounded-xl bg-rep-purple text-white font-semibold text-sm hover:bg-rep-purpleDark transition-colors">
+                                Inquire About Booths
+                            </button>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <span class="inline-block px-3 py-1 rounded-lg bg-rep-orangeLight text-rep-orangeDark text-xs font-bold mb-3">Volunteers</span>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2">Volunteer With Us</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    From setup and hospitality to accessibility assistance and family activities, volunteers make the Pekin Pride Festival safe and welcoming.
+                                </p>
+                            </div>
+                            <button type="button" onclick="openContactWithSubject('Volunteering')" class="mt-6 w-full py-2.5 px-4 rounded-xl bg-rep-orange text-slate-950 font-bold text-sm hover:bg-amber-500 transition-colors">
+                                Sign Up to Volunteer
+                            </button>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                            <div>
+                                <span class="inline-block px-3 py-1 rounded-lg bg-rep-yellowLight text-slate-900 text-xs font-bold mb-3">Community Sponsors</span>
+                                <h3 class="text-lg font-bold text-slate-900 mb-2">Sponsor the Festival</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    Community sponsorships keep the festival free and accessible to everyone while supporting year-round rural outreach programs.
+                                </p>
+                            </div>
+                            <button type="button" onclick="openContactWithSubject('Pekin Pride Festival')" class="mt-6 w-full py-2.5 px-4 rounded-xl bg-rep-yellow text-slate-950 font-bold text-sm hover:bg-amber-400 transition-colors">
+                                Become a Sponsor
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PAGE 4: CONTACT
+             ========================================== -->
+        <section id="page-contact" class="page-view hidden" aria-labelledby="contact-heading">
+            <div class="bg-rep-purple text-white py-12 px-4 sm:px-6 lg:px-8 border-b-4 border-rep-yellow">
+                <div class="max-w-4xl mx-auto">
+                    <span class="inline-block px-3 py-1 rounded-full bg-white/15 text-rep-yellow text-xs font-bold uppercase tracking-wider mb-3">
+                        Connect With Us
+                    </span>
+                    <h1 id="contact-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                        Contact Rural Equality Project
+                    </h1>
+                    <p class="mt-2 text-purple-100 text-base sm:text-lg">
+                        Have questions, want to volunteer, or looking to add your organization to our resource directory? Reach out below.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    
+                    <!-- Direct Contact Info Sidebar -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+                            <h2 class="text-xl font-bold text-rep-purple">Direct Contact Details</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-rep-purpleLight text-rep-purple flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-sm font-bold text-slate-900">Email</h3>
+                                        <a href="mailto:admin@ruralequalityproject.org" class="text-sm text-rep-purple font-semibold underline hover:text-rep-purpleDark break-all">
+                                            admin@ruralequalityproject.org
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-rep-orangeLight text-rep-orangeDark flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-sm font-bold text-slate-900">Location</h3>
+                                        <p class="text-sm text-slate-600">Pekin, Illinois (Serving Tazewell County &amp; Rural Central Illinois)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t border-slate-200">
+                                <h3 class="text-sm font-bold text-slate-900 mb-1">Resource List Additions</h3>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    If you represent a community organization and would like to be listed on our Resources page, please email <a href="mailto:admin@ruralequalityproject.org" class="text-rep-purple font-semibold underline">admin@ruralequalityproject.org</a> or select "Resource Addition" in the form.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accessible Contact Form -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+                            <h2 class="text-xl font-bold text-slate-900 mb-6">Send Us a Message</h2>
+
+                            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-5" novalidate>
+                                <div>
+                                    <label for="contact-name" class="block text-sm font-semibold text-slate-800 mb-1.5">
+                                        Your Name <span class="text-red-600" aria-hidden="true">*</span>
+                                    </label>
+                                    <input type="text" id="contact-name" name="name" required autocomplete="name"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:border-rep-purple"
+                                        placeholder="Jane Doe">
+                                </div>
+
+                                <div>
+                                    <label for="contact-email" class="block text-sm font-semibold text-slate-800 mb-1.5">
+                                        Email Address <span class="text-red-600" aria-hidden="true">*</span>
+                                    </label>
+                                    <input type="email" id="contact-email" name="email" required autocomplete="email"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:border-rep-purple"
+                                        placeholder="you@example.com">
+                                </div>
+
+                                <div>
+                                    <label for="contact-subject" class="block text-sm font-semibold text-slate-800 mb-1.5">
+                                        Inquiry Type <span class="text-red-600" aria-hidden="true">*</span>
+                                    </label>
+                                    <select id="contact-subject" name="subject" required
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm bg-white focus:border-rep-purple">
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Resource Addition">Resource Addition</option>
+                                        <option value="Volunteering">Volunteering</option>
+                                        <option value="Pekin Pride Festival">Pekin Pride Festival</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="contact-message" class="block text-sm font-semibold text-slate-800 mb-1.5">
+                                        Message <span class="text-red-600" aria-hidden="true">*</span>
+                                    </label>
+                                    <textarea id="contact-message" name="message" rows="4" required
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:border-rep-purple"
+                                        placeholder="How can we help or collaborate?"></textarea>
+                                </div>
+
+                                <!-- Form Status Feedback (ARIA Live) -->
+                                <div id="form-feedback" class="hidden rounded-xl p-4 text-sm font-medium" role="status" aria-live="polite"></div>
+
+                                <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-rep-purple text-white font-bold text-sm hover:bg-rep-purpleDark transition-colors shadow-md">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Landmark -->
+    <footer class="bg-slate-900 text-slate-300 border-t-4 border-rep-purple mt-16" role="contentinfo">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+                <div>
+                    <img src="Copy of Rural Equality Project.png"
+                         alt="Rural Equality Project logo"
+                         class="h-16 w-auto object-contain bg-white rounded-xl px-3 py-1.5 mb-3 shadow-sm">
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Established in November 2023 in Pekin, Illinois. Promoting equity, grassroots advocacy, and community outreach across rural Central Illinois.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-bold text-rep-yellow uppercase tracking-wider mb-3">Quick Navigation</h2>
+                    <ul class="space-y-2 text-sm">
+                        <li><button type="button" onclick="navigateTo('home')" class="hover:text-white transition-colors">Home</button></li>
+                        <li><button type="button" onclick="navigateTo('resources')" class="hover:text-white transition-colors">Resources</button></li>
+                        <li><button type="button" onclick="navigateTo('pride')" class="hover:text-white transition-colors">Pekin Pride Festival</button></li>
+                        <li><button type="button" onclick="navigateTo('contact')" class="hover:text-white transition-colors">Contact</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-bold text-rep-orange uppercase tracking-wider mb-3">Get In Touch</h2>
+                    <p class="text-sm text-slate-400 mb-2">Pekin, Illinois</p>
+                    <p class="text-sm">
+                        <a href="mailto:admin@ruralequalityproject.org" class="text-rep-yellow hover:underline break-all">
+                            admin@ruralequalityproject.org
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <p>&copy; <span id="current-year">2026</span> Rural Equality Project. All rights reserved.</p>
+                <p>Designed for accessibility, clarity &amp; rural community support.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Navigation & Accessibility Script -->
+    <script>
+        const pageTitles = {
+            home: 'Home | Rural Equality Project',
+            resources: 'Resources | Rural Equality Project',
+            pride: 'Pekin Pride Festival | Rural Equality Project',
+            contact: 'Contact | Rural Equality Project'
+        };
+
+        function navigateTo(pageId) {
+            // Hide all views
+            const views = document.querySelectorAll('.page-view');
+            views.forEach(view => view.classList.add('hidden'));
+
+            // Show target view
+            const targetView = document.getElementById('page-' + pageId);
+            if (targetView) {
+                targetView.classList.remove('hidden');
+            }
+
+            // Update aria-current on all nav buttons
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                if (btn.getAttribute('data-page') === pageId) {
+                    btn.setAttribute('aria-current', 'page');
+                } else {
+                    btn.removeAttribute('aria-current');
+                }
+            });
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.setAttribute('aria-expanded', 'false');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+
+            // Update document title & announce to screen readers
+            document.title = pageTitles[pageId] || 'Rural Equality Project';
+            const announcer = document.getElementById('sr-announcer');
+            if (announcer) {
+                announcer.textContent = 'Navigated to ' + document.title;
+            }
+
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileBtn.setAttribute('aria-expanded', 'true');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.setAttribute('aria-expanded', 'false');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+        }
+
+        function openContactWithSubject(subjectValue) {
+            navigateTo('contact');
+            const subjectSelect = document.getElementById('contact-subject');
+            if (subjectSelect) {
+                subjectSelect.value = subjectValue;
+                subjectSelect.focus();
+            }
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('contact-name');
+            const emailInput = document.getElementById('contact-email');
+            const subjectInput = document.getElementById('contact-subject');
+            const messageInput = document.getElementById('contact-message');
+            const feedback = document.getElementById('form-feedback');
+
+            if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
+                feedback.className = 'rounded-xl p-4 text-sm font-medium bg-red-50 text-red-800 border border-red-300';
+                feedback.textContent = 'Please complete all required fields (Name, Email, and Message) before sending.';
+                feedback.classList.remove('hidden');
+                return;
+            }
+
+            feedback.className = 'rounded-xl p-4 text-sm font-medium bg-rep-purpleLight text-rep-purple border border-rep-purple/30';
+            feedback.innerHTML = 'Thank you, <strong>' + nameInput.value.replace(/</g, "&lt;") + '</strong>! Your message regarding <strong>' + subjectInput.value + '</strong> has been recorded. You can also reach us directly anytime at <a href="mailto:admin@ruralequalityproject.org" class="underline font-bold">admin@ruralequalityproject.org</a>.';
+            feedback.classList.remove('hidden');
+
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
