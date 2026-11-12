@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rural Equality Project | Equity, Advocacy & Outreach</title>
-    <meta name="description" content="Rural Equality Project is a nonprofit organization established in November 2023 in Pekin, Illinois, promoting equity, advocacy, and outreach in rural communities.">
+    <meta name="description" content="Rural Equality Project is a nonprofit organization promoting equity, advocacy, and outreach in rural communities.">
     
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -199,15 +199,11 @@
 
                 <div class="max-w-6xl mx-auto relative z-10">
                     <div class="max-w-3xl space-y-6">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/25 text-rep-yellow text-xs sm:text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">
-                            <span class="w-2.5 h-2.5 rounded-full bg-rep-yellow" aria-hidden="true"></span>
-                            Established November 2023 • Pekin, Illinois
-                        </div>
                         <h1 id="home-heading" class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-sm">
                             Fostering Equity, Advocacy &amp; Belonging in <span class="text-rep-yellow underline decoration-rep-orange decoration-4 underline-offset-4">Rural Communities</span>
                         </h1>
                         <p class="text-base sm:text-lg text-purple-50 leading-relaxed max-w-2xl drop-shadow-sm">
-                            The Rural Equality Project works across Pekin and rural Central Illinois to build welcoming spaces, connect neighbors with life-saving and affirming resources, and celebrate rural diversity through grassroots community action.
+                            The Rural Equality Project was founded on one simple idea; To Promote Diversity and Equity in Rural Illinois,Through Outreach, Community Building and Advocacy.
                         </p>
                         <div class="pt-2 flex flex-wrap gap-4">
                             <button type="button" onclick="navigateTo('resources')" class="px-6 py-3.5 rounded-xl bg-rep-yellow text-slate-950 font-bold text-sm sm:text-base shadow-lg hover:bg-amber-400 transition-all flex items-center gap-2">
@@ -231,9 +227,9 @@
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div class="text-center max-w-3xl mx-auto mb-14">
                     <span class="text-xs font-bold uppercase tracking-widest text-rep-purple bg-rep-purpleLight px-3.5 py-1.5 rounded-full">Our Story &amp; Purpose</span>
-                    <h2 class="mt-4 text-2xl sm:text-4xl font-bold text-slate-900">Rooted in Pekin, Reaching Across Rural Illinois</h2>
+                    <h2 class="mt-4 text-2xl sm:text-4xl font-bold text-slate-900">Rooted Across Rural Illinois</h2>
                     <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
-                        Founded in November 2023, the Rural Equality Project emerged from a simple belief: everyone deserves to feel safe, valued, and supported right where they live—no matter the size of their hometown.
+                        Founded in November 2023, The Rural Equality Project was founded on one simple idea; To Promote Diversity and Equity in Rural Illinois,Through Outreach, Community Building and Advocacy.
                     </p>
                 </div>
 
@@ -291,7 +287,7 @@
                             </div>
                             <h3 class="text-xl font-bold text-slate-900 mb-3">Coalition &amp; Civic Engagement</h3>
                             <p class="text-slate-600 text-sm leading-relaxed">
-                                We partner with organizations across Greater Peoria, McLean County, and Champaign County to strengthen regional solidarity, educate communities, and amplify rural voices.
+                                We partner with organizations across Central Illinois to strengthen regional solidarity, educate communities, and amplify rural LGBTQ+ voices.
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100">
@@ -988,6 +984,26 @@
 
     <!-- Application Navigation & Accessibility Script -->
     <script>
+                function quickExit() {
+            try {
+                // Clear current page appearance immediately
+                document.body.innerHTML = '';
+                document.title = 'Google';
+                // Open a neutral page and replace current history entry so the Back button doesn't return here
+                window.open('https://www.google.com', '_newtab');
+                window.location.replace('https://www.google.com');
+            } catch (e) {
+                window.location.href = 'https://www.google.com';
+            }
+        }
+
+        // Allow users to press the Escape key to trigger Quick Exit
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                quickExit();
+            }
+        });
+
         const pageTitles = {
             home: 'Home | Rural Equality Project',
             resources: 'Resources | Rural Equality Project',
