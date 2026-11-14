@@ -981,10 +981,20 @@
             </div>
         </div>
     </footer>
+    
+   <!-- Floating Quick Exit Button for Immediate Safety Access -->
+    <div class="fixed bottom-5 right-5 z-50">
+        <button type="button" onclick="quickExit()" class="px-5 py-3.5 rounded-full bg-red-600 text-white font-extrabold text-sm shadow-xl hover:bg-red-700 border-2 border-white flex items-center gap-2 transition-transform hover:scale-105" aria-label="Quick Exit - Immediately leave this site and go to a neutral weather or search page (Shortcut: press Escape key)" title="Press ESC or click to leave this site immediately">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+            <span>Quick Exit (ESC)</span>
+        </button>
+    </div>
 
     <!-- Application Navigation & Accessibility Script -->
     <script>
-                function quickExit() {
+        function quickExit() {
             try {
                 // Clear current page appearance immediately
                 document.body.innerHTML = '';
