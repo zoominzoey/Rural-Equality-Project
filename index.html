@@ -128,30 +128,30 @@
                 
                 <!-- Brand Logo / Name -->
                 <div class="flex items-center">
-                    <a href="/" onclick="return navigateTo('home', event)" class="flex items-center gap-3 text-left group rounded-xl p-1 -ml-1" aria-label="Rural Equality Project - Return to Home page">
+                    <button type="button" onclick="navigateTo('home')" class="flex items-center gap-3 text-left group rounded-xl p-1 -ml-1" aria-label="Rural Equality Project - Return to Home page">
                         <img src="Copy of Rural Equality Project.png"
                              alt="Rural Equality Project logo featuring the words RURAL EQUALITY PROJECT next to a minimalist line-art barn above a horizontal six-color rainbow bar"
                              class="h-16 sm:h-20 w-auto object-contain">
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-2" aria-label="Primary Navigation">
-                    <a href="/" onclick="return navigateTo('home', event)" data-page="home" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all" aria-current="page">
+                    <button type="button" onclick="navigateTo('home')" data-page="home" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all" aria-current="page">
                         Home
-                    </a>
-                    <a href="/resources" onclick="return navigateTo('resources', event)" data-page="resources" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
+                    </button>
+                    <button type="button" onclick="navigateTo('resources')" data-page="resources" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
                         Resources
-                    </a>
-                    <a href="/business-directory" onclick="return navigateTo('businesses', event)" data-page="businesses" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
+                    </button>
+                    <button type="button" onclick="navigateTo('businesses')" data-page="businesses" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
                         Business Directory
-                    </a>
-                    <a href="/pekin-pride-festival" onclick="return navigateTo('pride', event)" data-page="pride" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
+                    </button>
+                    <button type="button" onclick="navigateTo('pride')" data-page="pride" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
                         Pekin Pride Festival
-                    </a>
-                    <a href="/contact" onclick="return navigateTo('contact', event)" data-page="contact" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
+                    </button>
+                    <button type="button" onclick="navigateTo('contact')" data-page="contact" class="nav-btn px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-rep-purpleLight hover:text-rep-purple transition-all">
                         Contact
-                    </a>
+                    </button>
                     <a href="https://givebutter.com/rural-equality-projectpekin-pride-aquxlx" target="_blank" rel="noopener noreferrer" class="ml-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-rep-yellow text-slate-950 hover:bg-amber-400 shadow-sm hover:shadow transition-all inline-flex items-center gap-1.5">
                         <svg class="w-4 h-4 text-rep-purple" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                             <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
@@ -179,40 +179,26 @@
 
         <!-- Mobile Menu Dropdown -->
         <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-2 shadow-lg" aria-label="Mobile Navigation">
-            <a href="/" onclick="return navigateTo('home', event)" data-page="home" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight" aria-current="page">
+            <button type="button" onclick="navigateTo('home')" data-page="home" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight" aria-current="page">
                 Home
-            </a>
-            <a href="/resources" onclick="return navigateTo('resources', event)" data-page="resources" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
+            </button>
+            <button type="button" onclick="navigateTo('resources')" data-page="resources" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
                 Resources
-            </a>
-            <a href="/business-directory" onclick="return navigateTo('businesses', event)" data-page="businesses" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
+            </button>
+            <button type="button" onclick="navigateTo('businesses')" data-page="businesses" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
                 Business Directory
-            </a>
-            <a href="/pekin-pride-festival" onclick="return navigateTo('pride', event)" data-page="pride" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
+            </button>
+            <button type="button" onclick="navigateTo('pride')" data-page="pride" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
                 Pekin Pride Festival
-            </a>
-            <a href="/contact" onclick="return navigateTo('contact', event)" data-page="contact" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
+            </button>
+            <button type="button" onclick="navigateTo('contact')" data-page="contact" class="nav-btn w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-slate-800 hover:bg-rep-purpleLight">
                 Contact
-            </a>
+            </button>
             <a href="https://givebutter.com/rural-equality-projectpekin-pride-aquxlx" target="_blank" rel="noopener noreferrer" class="w-full text-center block px-4 py-3 rounded-xl text-base font-bold bg-rep-yellow text-slate-950 hover:bg-amber-400 shadow-sm">
                 Donate
             </a>
         </nav>
-
-        <!-- Page URL Bar (Shows unique URL per page & supports copying) -->
-        <div class="bg-slate-50 border-t border-slate-200/80 py-1.5 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto flex items-center justify-between gap-2 text-xs text-slate-600">
-                <div class="flex items-center gap-2 truncate">
-                    <span class="font-semibold text-rep-purple shrink-0">Current URL:</span>
-                    <code id="current-page-url" class="bg-white px-2.5 py-0.5 rounded-md border border-slate-200 text-slate-700 font-mono truncate">ruralequalityproject.org</code>
-                </div>
-                <button type="button" onclick="copyCurrentPageUrl()" id="copy-url-btn" class="shrink-0 px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-rep-purple text-rep-purple font-semibold transition-colors">
-                    Copy URL
-                </button>
-            </div>
-        </div>
     </header>
-
     <!-- Main Content Landmark -->
     <main id="main-content" class="flex-grow" tabindex="-1">
 
