@@ -856,29 +856,38 @@
                     </div>
                 </div>
                 
-                <!-- Updateable Event Calendar Section -->
-                
+               <!-- Updateable Event Calendar Section -->
                 <section aria-labelledby="pride-calendar-heading" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
                     <div class="bg-slate-50 border-b border-slate-200 px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                         <div>
                             <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-rep-purple" aria-hidden="true"></span>
                                 <h2 id="pride-calendar-heading" class="text-xl font-bold text-slate-900">
-                                    Pekin Pride Event Calendar
+                                    Pekin Pride &amp; Community Event Calendar
                                 </h2>
                             </div>
                             <p class="text-xs sm:text-sm text-slate-600 mt-1">
                                 Stay up to date on upcoming Pekin Pride Festival dates, planning meetings, fundraisers, and community gatherings.
                             </p>
                         </div>
+                        <span class="text-xs text-rep-purple bg-rep-purpleLight px-3 py-1.5 rounded-full font-semibold self-start sm:self-center">
+                            Live Updateable Calendar
+                        </span>
                     </div>
 
                     <div class="p-4 sm:p-6">
                         <div class="relative w-full h-[600px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 flex flex-col items-center justify-center">
                             <!-- PASTE YOUR UPDATEABLE GOOGLE CALENDAR IFRAME HERE (Replace the src URL below with your Google Calendar embed link) -->
-                            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&showTabs=0&showTitle=0&showTz=0&showCalendars=0&mode=MONTH&src=cnVyYWxlcXVhbGl0eXByb2plY3RAZ21haWwuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%230b8043" 
-                                style="border-width:0" width="full" height="full" frameborder="0" scrolling="no">    
+                            <iframe 
+                                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&showTabs=0&showCalendars=0&showTitle=0&src=cnVyYWxlcXVhbGl0eXByb2plY3RAZ21haWwuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%230b8043"
+                                class="w-full h-full border-0 rounded-lg bg-white" 
+                                title="Pekin Pride Festival and Rural Equality Project Updateable Event Calendar"
+                                loading="lazy">
                             </iframe>
                         </div>
+                        <p class="mt-3 text-xs text-slate-500 text-center">
+                            To update this calendar, replace the <code class="bg-slate-100 px-1.5 py-0.5 rounded text-rep-purple font-mono">iframe src</code> with your public Google Calendar embed link. Any events added to your Google Calendar will automatically appear here.
+                        </p>
                     </div>
                 </section>
             </div>
